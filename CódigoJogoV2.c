@@ -394,7 +394,7 @@ int main(){
                         printf("Lilith aceita ajuda-lo. Ensina que o cajado se alimenta de emocoes — dor, culpa e desejo.\n"
                         "Ela ve grande energia em voce entao te leva em uma missao pra derror o grande espirito ansiao: Babuh.\n");
 
-                        printf("Ao atravessar o grande bosque esquecido, vocês se demparam com um pedestal.\n"
+                        printf("Ao atravessar o grande bosque esquecido, voces se demparam com um pedestal.\n"
                         "Nele, ha o nome de Babuh. Ela o invoca, e a batalha comeca.\n\n");
 
                         // batalha contra Babuh 
@@ -677,7 +677,7 @@ int main(){
     printf(" Uma voz fraca sussurra em sua mente, pedindo socorro.\n\n");
     
     printf(" A visao desaparece tao rapido quanto veio. A pedra vermelha se apaga, agora fria ao toque.\n");
-    printf(" Voce nao ganhou um poder destrutivo, mas sente uma urgencia que nao existia antes. Você tem um proposito.\n\n");
+    printf(" Voce nao ganhou um poder destrutivo, mas sente uma urgencia que nao existia antes. Voce tem um proposito.\n\n");
 
     printf("O caminho de volta para a fazenda e seguro, mas na visao parecia vir do pantano amaldicoado a oeste.\n");
     
@@ -711,19 +711,19 @@ int main(){
 
         case 3:
             // Desfecho 3: O estudante
-        printf("\n %s tenta fazer um movimento, mas hesita...\n", jogador);
-        printf(" Ao piscar os olhos, a floresta, a arvore queimada e as pedras reluzentes comecam a se distorcer.\n");
-        printf(" A imagem de tudo vibra e se dissolve, como tinta na agua.\n");
-        printf(" O som da floresta e substituido por um zumbido baixo e o cheiro de diesel.\n\n");
-        printf(" ...%s abre os olhos.\n", jogador);
-        printf(" Voce nao esta em uma floresta. Voce esta em um onibus chacoalhando.\n");
-        printf(" Um fone de ouvido caiu da sua orelha e o sol bate pela janela suja.\n\n");
+            printf("\n %s tenta fazer um movimento, mas hesita...\n", jogador);
+            printf(" Ao piscar os olhos, a floresta, a arvore queimada e as pedras reluzentes comecam a se distorcer.\n");
+            printf(" A imagem de tudo vibra e se dissolve, como tinta na agua.\n");
+            printf(" O som da floresta e substituido por um zumbido baixo e o cheiro de diesel.\n\n");
+            printf(" ...%s abre os olhos.\n", jogador);
+            printf(" Voce nao esta em uma floresta. Voce esta em um onibus chacoalhando.\n");
+            printf(" Um fone de ouvido caiu da sua orelha e o sol bate pela janela suja.\n\n");
         
-        // Esta é a parte que conecta com a realidade do jogador
-        printf("Voce olha a mochila no seu colo. Nela, um caderno grosso.\n");
-        printf("Seu destino: a faculdade, para a aula de Algoritmos e Programacao Estruturada.\n\n");
-        
-        printf("----------------------------GAME OVER--------------------------------\n");
+            // Esta é a parte que conecta com a realidade do jogador
+            printf("Voce olha a mochila no seu colo. Nela, um caderno grosso.\n");
+            printf("Seu destino: a faculdade, para a aula de Algoritmos e Programacao Estruturada.\n\n");
+            
+            printf("----------------------------GAME OVER--------------------------------\n");
     }
     }
 
