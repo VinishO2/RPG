@@ -14,7 +14,7 @@ int main(){
     
 
     printf("********************************************************************************\n");
-    printf("****** Bem vindo As cronicas de Colle: entre a espada e a desilusao ******\n");
+    printf("****** Bem vindo As cronicas de um viajante: entre a espada e a desilusao ******\n");
     printf("********************************************************************************\n\n");    
 
     printf("Digite o nome do seu personagem: ");
@@ -185,10 +185,8 @@ int main(){
 	                        for (int i = 0; i < 20; i++){
 	                            printf(" %s ataca o dragao com sua espada. \n", jogador);
 	                            pvDragao -= rand() % 12;
-                                printf("A vida do dragao e %d\n", pvDragao);
 	                            printf(" O dragao ataca %s com seu bafo de fogo. \n", jogador);
 	                            pv -= rand() % 5;
-                                printf("A vida do Personagem e %d\n", pv);
 	                            if (pvDragao <= 0)
 	                            {
 	                                printf(" \n%s vence o dragao lendario! Se torna o heroi do reino e consegue alcancar seu tao almejado sonho.\n", jogador);
@@ -244,12 +242,10 @@ int main(){
                             printf("Voces correm a cavalo durante 2 dias e depois de uma viagem longa pelas montanhas nevoentas do norte. %s chega na toca do dragao. Sua espada toma um brilho forte e chama a atencao do dragao. O dragao no seu ninho de pedras negras acorda e vai na direcao de voces. A batalha entao se inicia.\n", jogador);
 
                             for (int i = 0; i < 20; i++){
-                                printf(" %s e Claire atacam o dragao. \n", jogador);
+                                printf(" %s e Claire atacam o dragao. n", jogador);
                                 pvDragao -= rand() % 12;
-                                printf("%d", pvDragao);
                                 printf(" O dragao ataca %s e Claire com seu bafo de fogo. \n", jogador);
                                 pvGrupo2 -= rand() % 15;
-                                printf("%d", pvGrupo2);
 
                                 if (pvDragao <= 0)
                                 {
