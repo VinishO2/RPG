@@ -9,7 +9,7 @@ int main(){
     int lugar, decAA, decEsc, decCri;
     int decB, decBA, decBB, decBD, decC;
     int pedra;
-    int pvMonstro = 15, pvDragao = 44;
+    int pvMonstro = 15, pvDragao = 44, pvNythal = 60;
     char jogador [30];
     
 
@@ -23,20 +23,20 @@ int main(){
     jogador[strcspn(jogador, "\n")] = 0; // Remover o caractere de nova linha
 
     printf("\nINFOS\n");
-    printf("Ola, %s! Voce comeca com %d pontos de vida.\n", jogador, pv);
+    printf("Ola, %s! Voce comeca com %d pontos de vida.\n\n", jogador, pv);
 
     // Inicio da história
 
-    printf(" Sob o sol escaldante, %s estava treinando com seu graveto. Sempre o fazia depois de ajudar seus pais com as tarefas da fazenda. Eles eram camponeses, mas o seu sonho era ser aventureiro.\n", jogador);
-    printf(" Em uma fatidica noite, uma chuva forte assolou o campo. Em meio a floresta, um raio acertou uma arvore que estava perto de %s o arremessando para longe. Um enorme brilho e calor foi presenciado.\n", jogador);
-    printf(" Grande parte da arvore fora vaporizada, onde apenas um tronco com quatro joias reluzentes sobrara. %s se aproximou e pode ver de perto que tipo de pedras eram. Uma verde, preta, vermelha com pontos brancos. %s sentia grande magia vindo delas. E que apenas uma poderia pegar.\n", jogador, jogador);
+    printf("Sob o sol escaldante, %s estava treinando com seu graveto. Sempre o fazia depois de ajudar seus pais com as tarefas da fazenda. Eles eram camponeses, mas o seu sonho era ser aventureiro.\n", jogador);
+    printf("Em uma fatidica noite, uma chuva forte assolou o campo. Em meio a floresta, um raio acertou uma arvore que estava perto de %s o arremessando para longe. Um enorme brilho e calor foi presenciado.\n", jogador);
+    printf("Grande parte da arvore fora vaporizada, onde apenas um tronco com quatro joias reluzentes sobrara. %s se aproximou e pode ver de perto que tipo de pedras eram. Uma verde, preta, vermelha com pontos brancos. %s sentia grande magia vindo delas. E que apenas uma poderia pegar.\n", jogador, jogador);
 
 
 	printf(" 1 - Pedra Verde\n");
     printf(" 2 - Pedra Preta\n");
     printf(" 3 - Pedra Vermelha\n");
     
-    printf ("\nQual pedra %s escolhe?\n", jogador);
+    printf ("\nQual pedra %s escolhe?\n\n", jogador);
     scanf ("%d", &pedra);
 
     //escolha da pedra
@@ -368,9 +368,9 @@ int main(){
                 
         printf("\nO que %s faz?\n", jogador);
 
-        printf(" A. Pedir ajuda a Lilith para entender o cajado.\n");
-        printf(" B. Ameaca-la para conseguir informcoes.\n");
-        printf(" C. Tentar ler as runas sozinho.\n");
+        printf(" 1 - Pedir ajuda a Lilith para entender o cajado.\n");
+        printf(" 2 - Ameaca-la para conseguir informcoes.\n");
+        printf(" 3 - Tentar ler as runas sozinho.\n");
 
         scanf("%d", &decBA);
 
@@ -399,7 +399,7 @@ int main(){
 
                         // batalha contra Babuh 
                         for (int i = 0; i < 20; i++){
-                            printf(" %s ataca Babuh com o cajado. n", jogador);
+                            printf(" %s ataca Babuh com o cajado. \n", jogador);
                             pvMonstro -= rand() % 5;
                             printf(" Babuh ataca %s com seus tentaculos sombrios. \n", jogador);
                             pv -= rand() % 3;
@@ -591,11 +591,11 @@ int main(){
                     // batalha contra Nythal
                     for (int i = 0; i < 20; i++){
                         printf(" %s ataca Ny'thal com o cajado. \n", jogador);
-                        pvMonstro -= rand() % 6;
+                        pvNythal -= rand() % 15;
                         printf(" Ny'thal ataca %s com suas sombras. \n", jogador);
                         pv -= rand() % 5;
                         // condição de vitória ou derrota
-                        if (pvMonstro <= 0) //vitoria            
+                        if (pvNythal <= 0) //vitoria            
                         {
                             printf("O amanhecer corta o ceu. As nuvens negras se desfazem lentamente. Lilith, ferida, cai de joelhos.\n"
                             "O cajado se desintegra, transformando-se em poeira brilhante. Os dois viram parceiros e protegem o plano terreno do submundo.\n\n");
@@ -624,11 +624,11 @@ int main(){
 
                     for (int i = 0; i < 20; i++){
                         printf(" Lilith ataca Ny'thal com magia negra. \n");
-                        pvMonstro -= rand() % 6;
+                        pvNythal -= rand() % 15;
                         printf(" Ny'thal ataca %s com suas sombras. \n", jogador);
                         pv -= rand() % 4;
                             // condição de vitória ou derrota
-                        if (pvMonstro <= 0) //vitoria
+                        if (pvNythal <= 0) //vitoria
                         {
                             printf("\nO amanhecer corta o ceu, As nuvens negras se desfazem lentamente, Lilith, ferida, cai de joelhos.\n"
                             "O cajado se desintegra, transformando-se em poeira brilhante.\n"
@@ -682,9 +682,9 @@ int main(){
     printf("O caminho de volta para a fazenda e seguro, mas na visao parecia vir do pantano amaldicoado a oeste.\n");
     
     printf("\n O que %s faz?\n", jogador);
-    printf(" A. Investigar o pantano.\n");
-    printf(" B. Voltar para casa.\n");
-    printf(" C. Tentar entender a visao.\n");
+    printf(" 1 - Investigar o pantano.\n");
+    printf(" 2 - Voltar para casa.\n");
+    printf(" 3 - Tentar entender a visao.\n");
     printf("\n Sua escolha: ");
     
     scanf("%d", &decC);
