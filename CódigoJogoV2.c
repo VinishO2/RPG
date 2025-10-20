@@ -32,9 +32,9 @@ int main(){
     printf(" Grande parte da arvore fora vaporizada, onde apenas um tronco com quatro joias reluzentes sobrara. %s se aproximou e pode ver de perto que tipo de pedras eram. Uma verde, preta, vermelha com pontos brancos. %s sentia grande magia vindo delas. E que apenas uma poderia pegar.\n", jogador, jogador);
 
 
-	printf(" A - Pedra Verde\n");
-    printf(" B - Pedra Preta\n");
-    printf(" C - Pedra Vermelha\n");
+	printf(" 1 - Pedra Verde\n");
+    printf(" 2 - Pedra Preta\n");
+    printf(" 3 - Pedra Vermelha\n");
     
     printf ("\nQual pedra %s escolhe?\n", jogador);
     scanf ("%d", &pedra);
@@ -61,10 +61,10 @@ int main(){
 
         printf("Quando %s toca na pedra verde, uma enorme energia começa a emanar de dentro dela. Um raio de dentro da pedra atinge os céus, dissipando toda a tempestade. A pedra havia se transformado em uma espada de prata, com a joia verde no meio do cabo. %s podia sentir o poder emanando da espada. Sentiu que com essa espada poderia realizar seu sonho de ser tornar um grande aventureiro.\n", jogador, jogador);
 
-        printf(" A. Para a Capital.\n");
-        printf(" B. Para o Bosque Sombrio\n");
-        printf(" C. Para a Caverna da Solidao\n");
-        printf(" D. Para as Montanhas de algodao doce\n");
+        printf(" 1 - Para a Capital.\n");
+        printf(" 2 - Para o Bosque Sombrio\n");
+        printf(" 3 - Para a Caverna da Solidao\n");
+        printf(" 4 - Para as Montanhas de algodao doce\n");
 
         printf("Para onde %s deveria ir?\n", jogador);
         scanf ("%d", &lugar);
@@ -92,11 +92,11 @@ int main(){
         {
             printf(" %s decide ir para a capital. Onde podera mostrar seus talentos para os mestres de guildas e comecar sua historia. Ao entrar na taberna de guildas %s ve uma garota de cabelos loiros atendendo os aventureiros e anotando seus nomes, \n", jogador, jogador);
 
-            printf(" A. Pede para a garota o colocar em uma guilda.\n");
-            printf(" B. Flerta com a garota.\n");
-            printf(" C. Pede uma cerveja\n");
+            printf(" 1 - Pede para a garota o colocar em uma guilda.\n");
+            printf(" 2 - Flerta com a garota.\n");
+            printf(" 3 - Pede uma cerveja\n");
 
-            printf("\nO que %s faz?", jogador);
+            printf("\nO que %s faz? ", jogador);
             scanf ("%d", &decAA);
 
             switch (decAA)
@@ -120,10 +120,10 @@ int main(){
                 printf(" Ao pedir para ela o inscrever em uma guilda. A garota observa por completo, desde o topo da cabeça ate a sola dos pes. \n");
                 printf(" Claire: Me chamo Claire. Estarei te guiando para a aventura que mais se enquadra em seus requisitos.\n");
                 
-                printf(" A. UM DRAGAO!\n");
-                printf(" B. Grandes criaturas, como trolls e Ogros.\n");
-                printf(" C. Quero lutar com criatura medianas, como Orcs e Goblins.\n");
-                printf(" D. Nao quero me arriscar, quero matar alguns slimes apenas.\n");
+                printf(" 1 - UM DRAGAO!\n");
+                printf(" 2 - Grandes criaturas, como trolls e Ogros.\n");
+                printf(" 3 - Quero lutar com criatura medianas, como Orcs e Goblins.\n");
+                printf(" 4 - Nao quero me arriscar, quero matar alguns slimes apenas.\n");
                 
                 printf(" Claire: Me diga o que gostaria de enfrentar?\n");
                 scanf ("%d", &decCri);
@@ -157,9 +157,9 @@ int main(){
 
                         printf(" Claire: Estas sao as coordenas do ultimo dragao visto. O dragao de Magma que assola as montanhas do norte. Se conseguir reunir uma equipe de grandes guerreiros, talvez tenham uma chance.\n" );
 
-                        printf(" A. Vai sozinho\n");
-                        printf(" B. Se junta a uma guilda.\n");
-                        printf(" C. Pede para Claire ir com ele\n");
+                        printf(" 1 - Vai sozinho\n");
+                        printf(" 2 - Se junta a uma guilda.\n");
+                        printf(" 3 -  Pede para Claire ir com ele\n");
                         
                         printf(" O que %s faz?\n", jogador);
                         scanf ("%d", &decEsc);
@@ -334,10 +334,10 @@ int main(){
             "O chao sussurra nomes, O vento parece gritar, E uma nevoa o envolve.\n", jogador);
 
         printf("\nVoce pondera sobre seu proximo movimento:\n");
-        printf(" A. Seguir a voz que vem do pantano morto.\n");
-        printf(" B. Buscar abrigo no vilarejo amaldicoado.\n");
-        printf(" C. Ignorar os sussurros e seguir o proprio caminho.\n");
-        printf(" D. Invocar o poder do cajado para testar sua forca.\n");
+        printf(" 1 - Seguir a voz que vem do pantano morto.\n");
+        printf(" 2 - Buscar abrigo no vilarejo amaldicoado.\n");
+        printf(" 3 - Ignorar os sussurros e seguir o proprio caminho.\n");
+        printf(" 4 - Invocar o poder do cajado para testar sua forca.\n");
         printf("\nSua escolha: ");
 
         scanf("%d", &decB);
@@ -458,9 +458,9 @@ int main(){
         "A batalha ecoa entre relampagos e gritos. Lilith conjura correntes de energia negra, prendendo o monstro.\n\n"
         "E a sua chance, %s! Voce decide:\n", jogador, jogador);
                 
-        printf(" A. Canalizar toda a energia do cajado e destruir o guardiao (risco de corrupcao).\n");
-        printf(" B. Lutar junto com Lilith usando magia controlada.\n");
-        printf(" C. Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisivel).\n ");
+        printf(" 1 - Canalizar toda a energia do cajado e destruir o guardiao (risco de corrupcao).\n");
+        printf(" 2 - Lutar junto com Lilith usando magia controlada.\n");
+        printf(" 3 - Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisivel).\n ");
                 
         scanf("%d", &decBB);
 
@@ -556,9 +556,9 @@ int main(){
     "Se o libertar... o mundo acabara. Mas talvez... voce possa refaze-lo.\" O olho do cajado pulsa.\n\n");
                             
     printf(" Voce decide:\n\n");
-    printf(" A. Ajudar Lilith a quebrar o selo.\n");
-    printf(" B. Impedir o ritual.\n");
-    printf(" C. Destruir o cajado.\n");
+    printf(" 1 - Ajudar Lilith a quebrar o selo.\n");
+    printf(" 2 - Impedir o ritual.\n");
+    printf(" 3 - Destruir o cajado.\n");
                             
     scanf("%d", &decBD);
 
