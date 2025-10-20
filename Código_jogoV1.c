@@ -6,33 +6,37 @@
 
 int main(){
     int pv = 20, pvGrupo = 70, pvGrupo2 = 40;
-    int lugar, decAA, decAAA, decEsc, decCri;
-    int decAAB, decAAC, decAAAB, decAAAC, decB, decBA, decBAA, decBAB, decBB, decBBA, decBBB, decBBC, decBC, decBD, decBDA, decBDB, decBDC;
-    int obejeto, pedra, lugarB, lugarC, lugarD;
+    int lugar, decAA, decEsc, decCri;
+    int decB, decBA, decBB, decBD;
+    int pedra;
     int pvMonstro = 15, pvDragao = 44;
     char jogador [30];
     
 
-    printf("*****************************************\n");
-    printf("****** Bem vindo ao (nome do jogo) ******\n");
-    printf("*****************************************\n\n");    
+    printf("********************************************************************************\n");
+    printf("****** Bem vindo As cronicas de um viajante: entre a espada e a desilusao ******\n");
+    printf("********************************************************************************\n\n");    
 
-    printf("Digite o nome do seu personagem: ");
+    printf(" Digite o nome do seu personagem: ");
     fgets(jogador, sizeof(jogador), stdin);
 
-    printf("INFOS\n");
-    printf("Ola, %sVoce comeca com %d pontos de vida.\n", jogador, pv);
+    jogador[strcspn(jogador, "\n")] = 0; // Remover o caractere de nova linha
+
+    printf(" \nINFOS\n");
+    printf(" Ola, %s! Voce comeca com %d pontos de vida.\n\n", jogador, pv);
 
     // Inicio da história
 
-    printf("Sob o sol escaldante, %s estava treinando com seu graveto. Sempre o fazia depois de ajudar seus pais com as tarefas da fazenda. Eles eram camponeses, mas o seu sonho era ser aventureiro. Em uma fatídica noite, uma chuva forte assolou o campo. Em meio a floresta, um raio acertou uma árvore que estava perto de %s o arremessando para longe. Um enorme brilho e calor foi presenciado. Grande parte da arvore fora vaporizada, onde apenas um tronco com quatro joias reluzentes sobrara. %s se aproximou e pode ver de perto que tipo de pedras eram. Uma verde, azul, vermelha e preta com pontos brancos. %s sentia grande magia vindo delas. E que apenas uma poderia pegar.\n", jogador, jogador, jogador, jogador);
+    printf(" Sob o sol escaldante, %s estava treinando com seu graveto. Sempre o fazia depois de ajudar seus pais com as tarefas da fazenda. Eles eram camponeses, mas o seu sonho era ser aventureiro.\n", jogador);
+    printf(" Em uma fatidica noite, uma chuva forte assolou o campo. Em meio a floresta, um raio acertou uma arvore que estava perto de %s o arremessando para longe. Um enorme brilho e calor foi presenciado.\n", jogador);
+    printf(" Grande parte da arvore fora vaporizada, onde apenas um tronco com quatro joias reluzentes sobrara. %s se aproximou e pode ver de perto que tipo de pedras eram. Uma verde, preta, vermelha com pontos brancos. %s sentia grande magia vindo delas. E que apenas uma poderia pegar.\n", jogador, jogador);
 
-	printf(" A - Pedra Verde\n ");
-    printf(" B - Pedra Azul\n ");
-    printf(" C - Pedra Vermelha\n ");
-    printf(" D - Pedra Preta\n ");
+	printf(" A - Pedra Verde\n");
+    printf(" B - Pedra Preta\n");
+    printf(" C - Pedra Vermelha\n");
+    //printf(" D - Pedra \n");
     
-    printf ("\nQual pedra %s escolhe?\n");
+    printf ("\nQual pedra %s escolhe?\n", jogador);
     scanf ("%d", &pedra);
 
     //escolha da pedra
@@ -42,14 +46,14 @@ int main(){
         printf("Voce escolhou a Pedra Verde.\n");
         break;
     case 2:
-        printf("Voce escolhou a Pedra Azul.\n");
+        printf("Voce escolhou a Pedra Preta.\n");
         break;
     case 3: 
         printf("Voce escolhou a Pedra Vermelha.\n");
         break;
-    default:
-        printf("Voce escolhou a Pedra Preta.\n");
-        break;
+    //case 4:
+        //printf("Voce escolhou a Pedra .\n");
+       //break;
     }
     
     
@@ -58,14 +62,12 @@ int main(){
 
         printf("Quando %s toca na pedra verde, uma enorme energia começa a emanar de dentro dela. Um raio de dentro da pedra atinge os céus, dissipando toda a tempestade. A pedra havia se transformado em uma espada de prata, com a joia verde no meio do cabo. %s podia sentir o poder emanando da espada. Sentiu que com essa espada poderia realizar seu sonho de ser tornar um grande aventureiro.\n", jogador, jogador);
 
-        printf(" A. Para a Capital.\n ");
+        printf(" A. Para a Capital.\n");
         printf(" B. Para o Bosque Sombrio\n");
         printf(" C. Para a Caverna da Solidão\n");
         printf(" D. Para as Montanhas de algodão doce\n");
 
-	}
-	
-		printf("Para onde %s deveria ir?\n", jogador);
+        printf("Para onde %s deveria ir?\n", jogador);
         scanf ("%d", &lugar);
         
 	        switch (lugar)
@@ -83,10 +85,14 @@ int main(){
 	            printf(" Voce escolhou ir para as Montanhas de algodão doce.\n ");
 	            break;
 	        }
+
+	}
+	
+		
     // rota A.A
         if (lugar == 1)
         {
-            printf("%s decide ir para a capital. Onde poderá mostrar seus talentos para os mestres de guildas e começar sua história. Ao entrar na taberna de guildas %s vê uma garota de cabelos loiros atendendo os aventureiros e anotando seus nomes, \n", jogador, jogador, jogador);
+            printf("%s decide ir para a capital. Onde poderá mostrar seus talentos para os mestres de guildas e começar sua história. Ao entrar na taberna de guildas %s vê uma garota de cabelos loiros atendendo os aventureiros e anotando seus nomes, \n", jogador, jogador);
 
             printf(" A. Pede para a garota o colocar em uma guilda.\n ");
             printf(" B. Flerta com a garota.\n");
@@ -319,20 +325,19 @@ int main(){
 
 
         //ROTA B 
-        if (pedra == 4){
+        if (pedra == 2){
 
-        printf("O raio cai. A terra treme. Quando %s abre os olhos, o ceu esta coberto por nuvens roxas.\n"
-           "Tudo ao redor parece morto. A pedra preta pulsa como um coração vivo em sua mão.\n"
-           "Do núcleo dela, surge uma fumaça escura que se solidifica num cajado negro, com runas prateadas e um olho pulsante na ponta.\n"
-           "\"Eu vejo teu destino... e ele me vê também.\" — sussurra uma voz dentro da mente dele.\n"
-           "O chão sussurra nomes, O vento parece gritar, E uma névoa o envolve.\n",
-           jogador);
+        printf("O raio cai. A terra treme. Quando %s abre os olhos, o ceu esta coberto por nuvens roxas.\n" 
+            "Tudo ao redor parece morto. A pedra preta pulsa como um coracao vivo em sua mao.\n"
+            "Do nucleo dela, surge uma fumaca escura que se solidifica num cajado negro, com runas prateadas e um olho pulsante na ponta.\n"
+            "\"Eu vejo teu destino... e ele me ve tambem.\" sussurra uma voz dentro da mente dele.\n"
+            "O chao sussurra nomes, O vento parece gritar, E uma nevoa o envolve.\n", jogador);
 
-        printf("\nVocê pondera sobre seu próximo movimento:\n");
-        printf(" A. Seguir a voz que vem do pântano morto.\n");
-        printf(" B. Buscar abrigo no vilarejo amaldiçoado.\n");
-        printf(" C. Ignorar os sussurros e seguir o próprio caminho.\n");
-        printf(" D. Invocar o poder do cajado para testar sua força.\n");
+        printf("\nVoce pondera sobre seu proximo movimento:\n");
+        printf(" A. Seguir a voz que vem do pantano morto.\n");
+        printf(" B. Buscar abrigo no vilarejo amaldicoado.\n");
+        printf(" C. Ignorar os sussurros e seguir o proprio caminho.\n");
+        printf(" D. Invocar o poder do cajado para testar sua forca.\n");
         printf("\nSua escolha: ");
 
         scanf("%d", &decB);
@@ -357,13 +362,14 @@ int main(){
         //ROTA B.A
         if (decB == 1){
 
-        printf("Ao seguir a voz, o ar começa a feder a podridão. Árvores retorcidas parecem sussurrar.\n"
-            "Uma mulher de capa escura observa %s à distância, com olhos vermelhos.\n"
-            "Você ousa andar com o cajado de Ny'thal?\" Ela se apresenta como Lilith, uma feiticeira das sombras.\n", jogador);
+        printf("Ao seguir a voz, o ar começa a feder a podridao. Arvores retorcidas parecem sussurrar.\n"
+            "Uma mulher de capa escura observa %s a distancia, com olhos vermelhos.\n" 
+            "Voce ousa andar com o cajado de Ny'thal?\" Ela se apresenta como Lilith, uma feiticeira das sombras.\n", jogador);
                 
         printf("\nO que %s faz?\n", jogador);
+
         printf(" A. Pedir ajuda a Lilith para entender o cajado.\n");
-        printf(" B. Ameaçá-la para conseguir informações.\n");
+        printf(" B. Ameaca-la para conseguir informcoes.\n");
         printf(" C. Tentar ler as runas sozinho.\n");
 
         scanf("%d", &decBA);
@@ -380,19 +386,19 @@ int main(){
                  printf(" Tentar ler as runas sozinho./n ");
                 break;
                     }
-                    }
+        }
                    
         //ROTA B.A.A
         if (decBA == 1){
 
-        printf("Lilith aceita ajudá-lo. Ensina que o cajado se alimenta de emoções — dor, culpa e desejo.\n"
-        "Ela vê grande energia em você então te leva em uma missão pra derror o grande espirito ansião: Babuh.\n");
+        printf("Lilith aceita ajuda-lo. Ensina que o cajado se alimenta de emoções — dor, culpa e desejo.\n" 
+               "Ela ve grande energia em você entao te leva em uma missão pra derror o grande espirito ansiao: Babuh.\n");
 
-        printf("Ao atravessar o grande bosque esquecido, vocês se demparam com um pedestal.\n"
-        "Nele, há o nome de Babuh. Ela o invoca, e a batalha começa.\n");
+        printf("Ao atravessar o grande bosque esquecido, voces se demparam com um pedestal.\n" 
+               "Nele, ha o nome de Babuh. Ela o invoca, e a batalha começa.\n\n");
 
         for (int i = 0; i < 20; i++){
-            printf(" %s ataca Babuh com o cajado. n", jogador);
+            printf(" %s ataca Babuh com o cajado. \n", jogador);
             pvMonstro -= rand() % 5;
             printf(" Babuh ataca %s com seus tentáculos sombrios. \n", jogador);
             pv -= rand() % 3;
@@ -400,14 +406,14 @@ int main(){
             if (pvMonstro <= 0)
             {
             printf("Mesmo com pouco tempo pra dominar a magia do cajado, você se saiu bem.\n"
-                    "Vocês são parceiros agora, e protegem o submundo junto.\n");  
+                    "Voces são parceiros agora, e protegem o submundo junto.\n");  
 
             printf("----------------------------GAME OVER--------------------------------\n");
             break;
             } if (pv <= 0)
             {
-            printf("Babuh captura toda a energia vital vocês. Nada sobra.\n"
-            "E suas almas são capturadas pela entidade. Estão presos pela a eternidade.\n");
+            printf("Babuh captura toda a energia vital voces. Nada sobra.\n"
+            "E suas almas sao capturadas pela entidade. Estao presos pela a eternidade.\n");
                                         
             printf("----------------------------GAME OVER--------------------------------\n");
             break;
@@ -418,9 +424,9 @@ int main(){
         //ROTA B.A.B
         if (decBA == 2){
 
-        printf("Ao ameaçar Lilith, você percebe que ela não está brincando.\n"
-        "Com um gesto rápido, ela lança uma maldição que te prende no pântano.\n"
-        "Você se torna parte do lugar, um espírito perdido entre as árvores retorcidas.\n");
+        printf("Ao ameaçar Lilith, voce percebe que ela nao esta brincando.\n"
+        "Com um gesto rapido, ela lança uma maldicao que te prende no pantano.\n"
+        "Voce se torna parte do lugar, um espirito perdido entre as arvores retorcidas.\n");
                                                     
         printf("----------------------------GAME OVER--------------------------------\n");
             }
@@ -429,9 +435,9 @@ int main(){
         //ROTA B.A.C
         if (decBA == 3){
 
-        printf("Ao ler as runas sua mente fica zonza. Mas você não consegue parar. Precisa compreender.\n"
+        printf("Ao ler as runas sua mente fica zonza. Mas você nao consegue parar. Precisa compreender.\n"
         "Sua vista fica cinza e seu corpo se transforma em pedra.\n"
-        "Fica imóvel para sempre, mas a loucura corre solta na sua mente.\n");
+        "Fica imovel para sempre, mas a loucura corre solta na sua mente.\n");
                                                            
         printf("----------------------------GAME OVER--------------------------------\n");
             }
@@ -441,34 +447,34 @@ int main(){
         //Rota B.B
         if (decB == 2){
 
-        printf("Ao chegar no vilarejo amaldiçoado, %s percebe que as casas estão em ruínas e o silêncio é perturbador.\n"
-        "De repente, sombras surgem das paredes, revelando-se como espíritos inquietos.\n"
+        printf("\nAo chegar no vilarejo amaldicoado, %s percebe que as casas estao em ruinas e o silencio e perturbador.\n"
+        "De repente, sombras surgem das paredes, revelando-se como espiritos inquietos.\n"
         "Quem ousa perturbar nosso descanso? — sussurram eles.\n", jogador);
 
-        printf("\nEnquanto Lilith o guia pelas ruínas, o chão treme!\n"
-        "Da lama, surge um colosso feito de ossos e raízes: o Guardião do Pântano, protetor do selo sombrio.\n"
-        "Lilith alerta: \"Ele sente o cajado… e não quer que ele desperte!\"\n\n"
-        "O monstro avança, esmagando árvores. %s ergue o cajado, e o olho na ponta se abre, lançando um raio escarlate.\n"
-        "Mas o poder consome seu braço; o cajado o quer tanto quanto ele o quer.\n"
-        "A batalha ecoa entre relâmpagos e gritos. Lilith conjura correntes de energia negra, prendendo o monstro.\n\n"
-        "É a sua chance, %s! Você decide:\n");
+        printf("\nEnquanto Lilith o guia pelas ruinas, o chao treme!\n"
+        "Da lama, surge um colosso feito de ossos e raizes: o Guardiao do Pantano, protetor do selo sombrio.\n"
+        "Lilith alerta: \"Ele sente o cajado… e nao quer que ele desperte!\"\n\n"
+        "O monstro avança, esmagando arvores. %s ergue o cajado, e o olho na ponta se abre, lançando um raio escarlate.\n"
+        "Mas o poder consome seu braço; o cajado o quer tanto quanto voce o quer.\n"
+        "A batalha ecoa entre relampagos e gritos. Lilith conjura correntes de energia negra, prendendo o monstro.\n\n"
+        "E a sua chance, %s! Voce decide:\n", jogador, jogador);
                 
-        printf(" A. Canalizar toda a energia do cajado e destruir o guardião (risco de corrupção).\n");
+        printf(" A. Canalizar toda a energia do cajado e destruir o guardiao (risco de corrupcao).\n");
         printf(" B. Lutar junto com Lilith usando magia controlada.\n");
-        printf(" C. Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisível).\n");
+        printf(" C. Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisivel).\n");
                 
         scanf("%d", &decBB);
 
         switch (decBB)
             {
             case 1:
-                printf(" Canalizar toda a energia do cajado e destruir o guardião (risco de corrupção).\n");
+                printf(" Canalizar toda a energia do cajado e destruir o guardiao (risco de corrupcao).\n");
                 break;
             case 2:
                 printf(" Lutar junto com Lilith usando magia controlada.\n ");
                 break;
             case 3:
-                printf(" Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisível).\n");
+                printf(" Tentar usar o cajado para fortalecer as correntes de Lilith (resultado imprevisivel).\n");
                 break;
                 }
                     }
@@ -477,9 +483,9 @@ int main(){
     //Rota B.B.A
     if (decBB == 1){
 
-    printf("Você concentra toda a energia do cajado no guardião. Um brilho intenso envolve o campo de batalha.\n"
-    "O monstro ruge, mas a energia é demais para você controlar. A corrupção começa a tomar conta do seu corpo.\n"
-    "Você sente sua mente se fragmentando, sendo corrompida pelo cajado. A sua alma acaba sendo aprisionada dentro dele.\n");
+    printf("Voce concentra toda a energia do cajado no guardiao. Um brilho intenso envolve o campo de batalha.\n"
+    "O monstro ruge, mas a energia e demais para voce controlar. A corrupcao começa a tomar conta do seu corpo.\n"
+    "Voce sente sua mente se fragmentando, sendo corrompida pelo cajado. A sua alma acaba sendo aprisionada dentro dele.\n");
                             
     printf("----------------------------GAME OVER--------------------------------\n");
         }
@@ -489,9 +495,9 @@ int main(){
     //Rota B.B.B
     if (decBB == 2){
 
-    printf("Você e Lilith lutam juntos, combinando suas magias. O guardião é enfraquecido pelas correntes e pelos ataques coordenados.\n"
+    printf("Voce e Lilith lutam juntos, combinando suas magias. O guardiao e enfraquecido pelas correntes e pelos ataques coordenados.\n"
     "Finalmente, ele cai, liberando uma onda de energia sombria que se dissipa no ar.\n"
-    "Vocês sobreviveram, mas o cajado agora está mais poderoso e sedento por mais energia.\n");
+    "Voces sobreviveram, mas o cajado agora esta mais poderoso e sedento por mais energia.\n");
 
     for (int i = 0; i < 20; i++){
         printf(" O guardião ataca %s com seus tentáculos sombrios. \n", jogador);
@@ -500,7 +506,7 @@ int main(){
 
             if(pvMonstro <= 0)
                 {
-                printf(" Vocês saem vitoriosos. Ela então percebe sua grande capacidade. Vocês se tornam parceiros e protegem o submundo\n");
+                printf(" Vocês saem vitoriosos. Ela entao percebe sua grande capacidade. Voces se tornam parceiros e protegem o submundo\n");
                                                 
                 printf("----------------------------GAME OVER--------------------------------\n");
                 break;
@@ -508,7 +514,7 @@ int main(){
 
             if (pv <= 0)
                 {
-                printf("O guardião em meio a sua derrota, captura o cajado e aprisiona a sua alma no submundo\n");
+                printf("O guardiao em meio a sua derrota, captura o cajado e aprisiona a sua alma no submundo\n");
                                                 
                 printf("----------------------------GAME OVER--------------------------------\n");
 
@@ -521,7 +527,7 @@ int main(){
     //Rota B.B.C
     if (decBB == 3){
 
-    printf("Nada acontece. E o guadião te esmaga. É isso. Estupido.\n");
+    printf("Nada acontece. E o guadiao te esmaga. E isso. Estupido.\n");
                                                     
     printf("----------------------------GAME OVER--------------------------------\n");
             }
@@ -531,9 +537,9 @@ int main(){
     if (decB == 3){
 
     printf( "\nVocê se concentra, tentando invocar a imagem de uma serpente que vislumbrou em sua mente ao tocar o cajado.\n"
-    "O cajado parece obedecer. Ao mentalizar a criatura, uma sombra gigantesca surge sob seus pés.\n"
-    "Antes que %s possa reagir, a própria cobra irrompe do chão e o engole por inteiro.\n\n"
-    "** VOCÊ ESTÁ MORTO **\n\n", jogador);
+    "O cajado parece obedecer. Ao mentalizar a criatura, uma sombra gigantesca surge sob seus pes.\n"
+    "Antes que %s possa reagir, a própria cobra irrompe do chao e o engole por inteiro.\n\n"
+    "** VOCÊ ESTA MORTO **\n\n", jogador);
                             
     printf("----------------------------GAME OVER--------------------------------\n");
             }
@@ -543,10 +549,10 @@ int main(){
     //ROTA B.D
     if (decB == 4){
     
-    printf( "No topo de uma montanha de ossos petrificados, o cajado o guia até um círculo de runas.\n"
-    "O vento sopra em sentido contrário. O tempo para. Lilith o encara:\n"
-    "Debaixo destas runas dorme o coração do deus Nythal.\n"
-    "Se o libertar… o mundo acabará. Mas talvez... você possa refazê-lo.\" O olho do cajado pulsa. ");
+    printf("No topo de uma montanha de ossos petrificados, o cajado o guia ate um circulo de runas.\n"
+    "O vento sopra em sentido contrario. O tempo para. Lilith o encara:\n"
+    "Debaixo destas runas dorme o coracao do deus Ny'thal.\n"
+    "Se o libertar… o mundo acabara. Mas talvez... você possa refaze-lo.\" O olho do cajado pulsa. ");
                             
     printf("Você decide:\n");
     printf(" A. Ajudar Lilith a quebrar o selo.\n");
@@ -574,29 +580,29 @@ int main(){
     //Rota B.D.A
     if (decBD == 1){
 
-    printf("O selo se rompe. O chão sangra. Espíritos gritam. O ar cheira a ferro.\n");
-    printf("O chão se abre. Um corpo colossal emerge: Nythal, deus das sombras.\n"
-    "Suas asas de fumaça cobrem o céu. Seus olhos são só vazios brilhantes.\n");
-    printf("Nythal: “A alma que tocou meu cajado será minha.” Lilith flutua, conjurando esferas de luz vermelha.\n"
+    printf("O selo se rompe. O chao sangra. Espiritos gritam. O ar cheira a ferro.\n");
+    printf("O chao se abre. Um corpo colossal emerge: Ny'thal, deus das sombras.\n"
+    "Suas asas de fumaça cobrem o ceu. Seus olhos sao so vazios brilhantes.\n");
+    printf("Ny'thal: “A alma que tocou meu cajado sera minha.” Lilith flutua, conjurando esferas de luz vermelha.\n"
     "O cajado vibra com força. O olho fala com %s.\n"
-    "A batalha começa: \n");
+    "A batalha começa: \n", jogador);
 
     for (int i = 0; i < 20; i++){
-        printf(" %s ataca Nythal com o cajado. n", jogador);
+        printf(" %s ataca Nythal com o cajado. \n", jogador);
         pvMonstro -= rand() % 7;
         printf(" Nythal ataca %s com suas sombras. \n", jogador);
         pv -= rand() % 5;
         
         if (pvMonstro <= 0)                   
         {
-            printf("“O amanhecer corta o céu. As nuvens negras se desfazem lentamente. Lilith, ferida, cai de joelhos.\n"
+            printf("O amanhecer corta o ceu. As nuvens negras se desfazem lentamente. Lilith, ferida, cai de joelhos.\n"
             "O cajado se desintegra, transformando-se em poeira brilhante. Os dois viram parceiros e protegem o plano terreno do submundo.”");
 
             printf("----------------------------GAME OVER--------------------------------\n");
             break;
         } if (pv <= 0)
         {
-            printf("“Suas almas são capturas por Nythal, ele os aprisiona dentro do cajado e os fazem sofrer pela eternidade.”");
+            printf("“Suas almas sao capturas por Ny'thal. Ele os aprisiona dentro do cajado e os fazem sofrer pela eternidade.”");
                                     
             printf("----------------------------GAME OVER--------------------------------\n");
             break;
@@ -610,20 +616,20 @@ int main(){
     if (decBD == 2){
                             
     printf("“Lilith o ataca, mas hesita. O olhar de %s a faz parar.\n.”", jogador);
-    printf("O chão se abre. Um corpo colossal emerge: Nythal, deus das sombras. Suas asas de fumaça cobrem o céu. Seus olhos são só vazios brilhantes.\n");
-    printf("Nythal: “A alma que tocou meu cajado será minha.” Lilith flutua, conjurando esferas de luz vermelha.\n");
-    printf("O cajado vibra com força. O olho fala com %s.\n");
-    printf("A batalha começa: \n”");
+    printf("O chao se abre. Um corpo colossal emerge: Ny'thal, deus das sombras. Suas asas de fumaca cobrem o ceu. Seus olhos sao so vazios brilhantes.\n");
+    printf("Ny'thal: A alma que tocou meu cajado será minha. Lilith flutua, conjurando esferas de luz vermelha.\n");
+    printf("O cajado vibra com força. O olho fala com %s.\n", jogador);
+    printf("A batalha comeca: \n");
 
     for (int i = 0; i < 20; i++){
-        printf(" Lilith ataca Nythal com magia negra. n");
+        printf(" Lilith ataca Ny'thal com magia negra. \n");
         pvMonstro -= rand() % 6;
-        printf(" Nythal ataca %s com suas sombras. \n", jogador);
+        printf(" Ny'thal ataca %s com suas sombras. \n", jogador);
         pv -= rand() % 4;
             
         if (pvMonstro <= 0)
         {
-            printf("\nO amanhecer corta o céu, As nuvens negras se desfazem lentamente, Lilith, ferida, cai de joelhos.\n"
+            printf("\nO amanhecer corta o ceu, As nuvens negras se desfazem lentamente, Lilith, ferida, cai de joelhos.\n"
             "O cajado se desintegra, transformando-se em poeira brilhante.\n"
             "Os dois viram parceiros e protegem o plano terreno do submundo.\n\n");
 
@@ -631,7 +637,7 @@ int main(){
             break;
         } if (pv <= 0)
         {
-            printf("“Suas almas são capturas por Nythal, ele os aprisiona dentro do cajado e os fazem sofrer pela eternidade.”");
+            printf("“Suas almas sao capturas por Ny'thal, ele os aprisiona dentro do cajado e os fazem sofrer pela eternidade.”");
                                     
             printf("----------------------------GAME OVER--------------------------------\n");
             break;
@@ -646,7 +652,7 @@ int main(){
 
     printf("\nO cajado se parte, e fragmentos penetram no corpo dele — dor e poder o atravessam.\n"
     "O poder flui por todo o seu corpo, mas sem o controle, o poder cria aberturas no corpo de %s.\n"
-    "Varias luzes saem de dentro de seu corpo e por fim ele explode. %s morreu.\n\n");
+    "Varias luzes saem de dentro de seu corpo e por fim ele explode. %s morreu.\n\n", jogador, jogador);
 
     printf("----------------------------GAME OVER--------------------------------\n");
         }
